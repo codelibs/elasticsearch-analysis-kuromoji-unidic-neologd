@@ -95,11 +95,13 @@ public class PosConcatenationFilterFactoryTest {
                 @SuppressWarnings("unchecked")
                 List<Map<String, Object>> tokens = (List<Map<String, Object>>) response
                         .getContent(EcrCurl.jsonParser).get("tokens");
-                assertEquals(1, tokens.size());
-                assertEquals("詳細設計", tokens.get(0).get("token").toString());
+                assertEquals(2, tokens.size());
+                assertEquals("詳細", tokens.get(0).get("token").toString());
+                assertEquals("設計", tokens.get(1).get("token").toString());
             }
         }
     }
+
     @Test
     public void test_basic2() throws Exception {
 
@@ -127,8 +129,9 @@ public class PosConcatenationFilterFactoryTest {
                 @SuppressWarnings("unchecked")
                 List<Map<String, Object>> tokens = (List<Map<String, Object>>) response
                         .getContent(EcrCurl.jsonParser).get("tokens");
-                assertEquals(1, tokens.size());
-                assertEquals("詳細設計", tokens.get(0).get("token").toString());
+                assertEquals(2, tokens.size());
+                assertEquals("詳細", tokens.get(0).get("token").toString());
+                assertEquals("設計", tokens.get(1).get("token").toString());
             }
         }
     }

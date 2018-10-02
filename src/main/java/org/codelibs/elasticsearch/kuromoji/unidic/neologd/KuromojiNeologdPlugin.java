@@ -27,30 +27,30 @@ public class KuromojiNeologdPlugin extends Plugin implements AnalysisPlugin {
 
     @Override
     public Map<String, AnalysisProvider<CharFilterFactory>> getCharFilters() {
-        return singletonMap("kuromoji_neologd_iteration_mark", KuromojiIterationMarkCharFilterFactory::new);
+        return singletonMap("kuromoji_unidic_neologd_iteration_mark", KuromojiIterationMarkCharFilterFactory::new);
     }
 
     @Override
     public Map<String, AnalysisProvider<TokenFilterFactory>> getTokenFilters() {
         Map<String, AnalysisProvider<TokenFilterFactory>> extra = new HashMap<>();
-        extra.put("kuromoji_neologd_baseform", KuromojiBaseFormFilterFactory::new);
-        extra.put("kuromoji_neologd_part_of_speech", KuromojiPartOfSpeechFilterFactory::new);
-        extra.put("kuromoji_neologd_readingform", KuromojiReadingFormFilterFactory::new);
-        extra.put("kuromoji_neologd_stemmer", KuromojiKatakanaStemmerFactory::new);
-        extra.put("kuromoji_neologd_number", KuromojiNumberFilterFactory::new);
-        extra.put("kuromoji_neologd_pos_concat", PosConcatenationFilterFactory::new);
+        extra.put("kuromoji_unidic_neologd_baseform", KuromojiBaseFormFilterFactory::new);
+        extra.put("kuromoji_unidic_neologd_part_of_speech", KuromojiPartOfSpeechFilterFactory::new);
+        extra.put("kuromoji_unidic_neologd_readingform", KuromojiReadingFormFilterFactory::new);
+        extra.put("kuromoji_unidic_neologd_stemmer", KuromojiKatakanaStemmerFactory::new);
+        extra.put("kuromoji_unidic_neologd_number", KuromojiNumberFilterFactory::new);
+        extra.put("kuromoji_unidic_neologd_pos_concat", PosConcatenationFilterFactory::new);
         return extra;
     }
 
     @Override
     public Map<String, AnalysisProvider<TokenizerFactory>> getTokenizers() {
         Map<String, AnalysisProvider<TokenizerFactory>> extra = new HashMap<>();
-        extra.put("kuromoji_neologd_tokenizer", KuromojiTokenizerFactory::new);
+        extra.put("kuromoji_unidic_neologd_tokenizer", KuromojiTokenizerFactory::new);
         return extra;
     }
 
     @Override
     public Map<String, AnalysisProvider<AnalyzerProvider<? extends Analyzer>>> getAnalyzers() {
-        return singletonMap("kuromoji_neologd", KuromojiAnalyzerProvider::new);
+        return singletonMap("kuromoji_unidic_neologd", KuromojiAnalyzerProvider::new);
     }
 }
