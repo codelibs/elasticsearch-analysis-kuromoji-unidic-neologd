@@ -40,7 +40,7 @@ See [Elasticsearch Kuromoji](https://github.com/elastic/elasticsearch-analysis-k
 
 ### Update Kuromoji Jar File
 
-If you want to replace with the latest Lucene Neologd jar file, download it from http://maven.codelibs.org/org/codelibs/lucene-analyzers-kuromoji-unidic-neologd/ and then replace old file in $ES_HOME/plugins/analysis-kuromoji-unidic-neologd.
+If you want to replace with the latest Lucene Neologd jar file, download it from https://maven.codelibs.org/org/codelibs/lucene-analyzers-kuromoji-unidic-neologd/ and then replace old file in $ES_HOME/plugins/analysis-kuromoji-unidic-neologd.
 
 ### What is NEologd
 
@@ -56,7 +56,7 @@ To use the jar file, put the following settings into your pom.xml.
         <repository>
             <id>codelibs.org</id>
             <name>CodeLibs Repository</name>
-            <url>http://maven.codelibs.org/</url>
+            <url>https://maven.codelibs.org/</url>
         </repository>
     </repositories>
     ...
@@ -65,9 +65,9 @@ To use the jar file, put the following settings into your pom.xml.
             <groupId>org.codelibs</groupId>
             <artifactId>lucene-analyzers-kuromoji-unidic-neologd</artifactId>
             <version>6.4.0-20180927</version>
-            <!-- http://maven.codelibs.org/org/codelibs/lucene-analyzers-kuromoji-unidic-neologd/ --->
+            <!-- https://maven.codelibs.org/org/codelibs/lucene-analyzers-kuromoji-unidic-neologd/ --->
         </dependency>
     ...
 
-See [CodeLibs Maven Repository](http://maven.codelibs.org/org/codelibs/lucene-analyzers-kuromoji-unidic-neologd/).
+See [CodeLibs Maven Repository](https://maven.codelibs.org/org/codelibs/lucene-analyzers-kuromoji-unidic-neologd/).
 
